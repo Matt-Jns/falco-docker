@@ -34,19 +34,3 @@ docker -- pull marketplace.gcr.io/google/falco
 ```
 Dockerfile for this image can be found [here](https://github.com/GoogleCloudPlatform/click-to-deploy/tree/master/docker/falco/0/debian10/0.31/).
 =======
-|DRUPAL_DB_NAME | Database name that Drupal will use to connect with the database. |
-|ALLOW_EMPTY_PASSWORD | It can be used to allow blank passwords. |
-|MYSQL_USER | Database user. |
-|MYSQL_DATABASE | Database name. |
-|MYSQL_ALLOW_EMPTY_ROOT_PASSWORD|option for empty password. | 
-|MYSQL_HOST|Database host name. |
-|MYSQL_PASSWORD|Database password. |
-|MYSQL_ROOT_PASSWORD| Database root password .|
- 
-## <a name="references-volumes"></a>Volumes
-
-These are the filesystem paths used by the container image.
-
-| **Path** | **Description** |
-|:---------|:----------------|
-|/var/www/html| All Drupal files are installed here containing user uploaded data, themes, profiles and modules. |
