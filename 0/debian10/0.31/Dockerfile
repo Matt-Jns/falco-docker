@@ -31,7 +31,6 @@ RUN apt-get update \
 	llvm-7 \
 	netcat \
 	xz-utils \
-    telnet \
 	&& rm -rf /var/lib/apt/lists/*
 
 # gcc 6 is no longer included in debian stable, but we need it to
