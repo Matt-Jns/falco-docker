@@ -58,4 +58,4 @@ tests:
   command: ['curl', '-s', 'http://localhost:8765/healthz']
   expect:
     stdout:
-      matches: '{"status":"ok"}'
+      matches: '{"status": "ok"}'
