@@ -54,8 +54,8 @@ teardown:
 
 target: some-falco-$UNIQUE-id
 tests:
-- name: Runtime status
-  command: [sh, -c, "echo -e '\x1dclose\x0d' | telnet localhost 8765"]
+- name: Falco Liveness Check
+  command: ['curl', '-s', 'http://localhost:8765/healthz']
   expect:
-    exitCode:
-      equals: 0
+    stdout:
+      matches: '{"status":"ok"}'
