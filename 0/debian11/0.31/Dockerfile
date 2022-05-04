@@ -1,13 +1,11 @@
-{{- $falco := index .Packages "falco" -}}
+FROM marketplace.gcr.io/google/debian11
 
-FROM {{ .From }}
-
-ARG FALCO_VERSION={{ $falco.Version }}
+ARG FALCO_VERSION=0.31.1
 ARG VERSION_BUCKET=deb
 ENV VERSION_BUCKET=${VERSION_BUCKET}
 
 ENV FALCO_VERSION ${FALCO_VERSION}
-ENV C2D_RELEASE {{ $falco.Version }}
+ENV C2D_RELEASE 0.31.1
 ENV HOST_ROOT /host
 ENV HOME /root
 

@@ -21,16 +21,16 @@
 cloudbuild:
   enable_parallel: false
 versions:
-- dir: 0/debian10/0.31
-  from: marketplace.gcr.io/google/debian10
+- dir: 0/debian11/0.31
+  from: marketplace.gcr.io/google/debian11
   packages:
     falco:
       version: 0.31.1
   repo: falco
   tags:
-  - 0.31.1-debian10
-  - 0.31-debian10
-  - 0-debian10
+  - 0.31.1-debian11
+  - 0.31-debian11
+  - 0-debian11
   - 0.31.1
   - '0.31'
   - '3'
