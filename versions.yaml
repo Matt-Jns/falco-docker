@@ -36,3 +36,17 @@ versions:
   - '3'
   - latest
 
+- dir: exporter
+  excludeTests:
+  - tests/functional_tests/running_test.yaml
+  from: marketplace.gcr.io/google/debian11
+  packages:
+    falco_exporter:
+      sha256: cda8d6c60c240c73c28ed0d4e81cb7b52808dcf0358aec41fddc93a30d1e68b7
+      version: 0.7.0
+  repo: falco
+  tags:
+  - exporter-0.7.0
+  - exporter-0.7
+  - exporter
+  templateSubDir: exporter
