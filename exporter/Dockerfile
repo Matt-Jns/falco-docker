@@ -1,5 +1,3 @@
-
-
 FROM marketplace.gcr.io/google/debian11
 
 ENV EXPORTER_VERSION 0.7.0
@@ -11,7 +9,7 @@ RUN set -eu \
     && rm -rf /var/lib/apt/lists/* \
     && wget -O /opt/falco-exporter.tar.gz https://github.com/falcosecurity/falco-exporter/releases/download/v${EXPORTER_VERSION}/falco-exporter_${EXPORTER_VERSION}_linux_amd64.tar.gz \
     && echo "${EXPORTER_SHA256} /opt/falco-exporter.tar.gz" | sha256sum -c \
-    && tar -xzf /opt/falco-exporter.tar.gz --directory=/opt
+    && tar xzf /opt/falco-exporter.tar.gz 
 
 EXPOSE 9376/tcp
 EXPOSE 19376/tcp

@@ -1,4 +1,4 @@
-{{- $falco_exporter := index .Packages "falco_exporter" }}
+{{- $falco_exporter := index .Packages "falco_exporter" -}}
 
 FROM {{ .From }}
 
